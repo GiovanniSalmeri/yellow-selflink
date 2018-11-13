@@ -30,10 +30,10 @@ class YellowSelfLink {
                 }
             }
             if ($found) {
-                $output = "<a href=\"" . htmlspecialchars($loc) . "\">" . htmlspecialchars($atext) . "</a>";
+                $output = "<a  rel=\"nofollow\" href=\"" . htmlspecialchars($loc) . "\"target=\"_blank\">" . htmlspecialchars($atext) . "</a>";
             } else {
                 $slug = htmlspecialchars(ltrim($slug, '/'));
-                $output = "<a class=\"missing\" href=\"" . $slug . "\">" . $slug . "</a>";
+                $output = "<a rel=\"nofollow\"  class=\"missing\" href=\"" . $slug . "\" target=\"_blank\">" . $slug . "</a>";
             }
         }
         return $output;
@@ -43,7 +43,7 @@ class YellowSelfLink {
     public function onExtra($name) {
         $output = null;
         if ($name == "header") {
-            $output = "<style>a.missing, a.missing:hover { color: red }</style>\n";
+            $output = "<style>a.missing, a.missing:hover { background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC') center right no-repeat; vertical-align:middle;  margin-right 18px; padding-right:12px;}</style>\n";
         }
         return $output;
     }
