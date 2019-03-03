@@ -1,6 +1,6 @@
 # Selflink extension 0.8.2
 
-Create internal links. (Similar in function to the tag `cms_selfink` in CMSMadeSimple.)
+Create internal links.
 
 ## How to install extension
 
@@ -41,6 +41,8 @@ If the argument of the shortcut is ambiguous, the behaviour is undefined.
 If no page matches the argument, the shortcut creates a link equivalent to this HTML code:
 
 `<a href="slug" class="missing">slug</a>`  
+
+(All this is functionally similar to the tag `cms_selfink` in CMSMadeSimple.)
 
 ## Developer
 
