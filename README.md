@@ -1,4 +1,4 @@
-# Selflink extension 0.8.2
+# Selflink extension 0.8.3
 
 Create internal links.
 
