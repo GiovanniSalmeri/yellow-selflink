@@ -14,9 +14,9 @@ class YellowSelfLink {
     }
     
     // Handle page content parsing of custom block
-    public function onParseContentShortcut($page, $name, $text, $shortcut) {
+    public function onParseContentShortcut($page, $name, $text, $type) {
         $output = null;
-        if ($name=="a" && $shortcut) {
+        if ($name=="a" && ($type=="block" || $type=="inline")) {
             list($slug, $atext) = explode(" ", $text, 2);
             $slug = '/' . $slug;
             if (substru($atext, 0, 2) == "- ") $atext = trim(substru($atext, 2));
