@@ -16,7 +16,7 @@ Create an `[a]` shortcut.
 
 The following two arguments are available, the second of which is optional:
 
-`slug` = the slug of the page to link    
+`slug` = the slug of the page to link, possibly with the fragment  
 `text` = the text to be used in the link  
 
 ## Example
@@ -24,6 +24,7 @@ The following two arguments are available, the second of which is optional:
 Creating a link:
 
 `[a somepage]`  
+`[a somepage#fragment]`  
 `[a somepage - text for linking]`  
 
 The shortcut creates a link with the full path of the page: so no link will break if you rearrange the structure of the site without modifying the slugs of the pages. The previous examples are thus equivalent to:
@@ -41,8 +42,6 @@ If the argument of the shortcut is ambiguous, the behaviour is undefined.
 If no page matches the argument, the shortcut creates a link equivalent to this HTML code:
 
 `<a href="slug" class="missing">slug</a>`  
-
-(All this is functionally similar to the tag `cms_selfink` in CMSMadeSimple.)
 
 ## Developer
 

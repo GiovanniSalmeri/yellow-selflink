@@ -18,9 +18,10 @@ class YellowSelfLink {
         $output = null;
         if ($name=="a" && ($type=="block" || $type=="inline")) {
             list($slug, $atext) = explode(" ", $text, 2);
+            list($slug, $fragment) = explode("#", $slug);
             $slug = '/' . $slug;
             if (substru($atext, 0, 2) == "- ") $atext = trim(substru($atext, 2));
-            $pages = $this->yellow->content->index();
+            $pages = $this->yellow->content->index(true);
             $found = false; $loc = null;
             foreach($pages as $page) {
                 $loc = $page->getLocation(true);
@@ -31,10 +32,10 @@ class YellowSelfLink {
                 }
             }
             if ($found) {
-                $output = "<a href=\"" . htmlspecialchars($loc) . "\">" . htmlspecialchars($atext) . "</a>";
+                $output = "<a href=\"" . htmlspecialchars($loc) . ($fragment ? "#$fragment" : "") . "\">" . htmlspecialchars($atext) . "</a>";
             } else {
                 $slug = htmlspecialchars(ltrim($slug, '/'));
-                $output = "<a class=\"missing\" href=\"" . $slug . "\">" . $slug . "</a>";
+                $output = "<a class=\"missing\" href=\"" . htmlspecialchars($slug) . "\">" . htmlspecialchars($slug) . "</a>";
             }
         }
         return $output;
