@@ -1,14 +1,6 @@
-# Selflink extension 0.8.9
+# Selflink extension 0.8.16
 
 Create internal links.
-
-## How to install extension
-
-1. [Download and install Datenstrom Yellow](https://github.com/datenstrom/yellow/).
-2. [Download extension](../../archive/master.zip). If you are using Safari, right click and select 'Download file as'.
-3. Copy `master.zip` into your `system/extension` folder.
-
-To uninstall delete the [extension files](extension.ini).
 
 ## How to create an internal link
 
@@ -43,6 +35,10 @@ If no page matches the argument, the shortcut creates a link equivalent to this 
 
 `<a href="slug" class="missing">slug</a>`  
 
+## Installation
+
+[Download extension](https://github.com/GiovanniSalmeri/yellow-selflink/archive/master.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
+
 ## Developer
 
-Giovanni Salmeri
+Giovanni Salmeri. [Get help](https://github.com/GiovanniSalmeri/yellow-selflink/issues).

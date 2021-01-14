@@ -1,11 +1,10 @@
 <?php
-// SelfLink plugin
-// Copyright (c) 2018-2019 Giovanni Salmeri
+// SelfLink extension, https://github.com/GiovanniSalmeri/yellow-selflink
+// Copyright (c) 2018-2021 Giovanni Salmeri
 // This file may be used and distributed under the terms of the public license.
 
 class YellowSelfLink {
-    const VERSION = "0.8.9";
-    const TYPE = "feature";
+    const VERSION = "0.8.16";
     public $yellow;         //access to API
     
     // Handle initialisation
