@@ -1,7 +1,5 @@
 <?php
 // SelfLink extension, https://github.com/GiovanniSalmeri/yellow-selflink
-// Copyright (c) 2018-2021 Giovanni Salmeri
-// This file may be used and distributed under the terms of the public license.
 
 class YellowSelfLink {
     const VERSION = "0.8.16";
