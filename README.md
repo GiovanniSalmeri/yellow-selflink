@@ -15,25 +15,33 @@ The following two arguments are available, the second of which is optional:
 
 Creating a link:
 
-`[a somepage]`  
-`[a somepage#fragment]`  
-`[a somepage - text for linking]`  
+```
+[a somepage]  
+[a somepage#fragment]  
+[a somepage - text for linking]  
+```
 
 The shortcut creates a link with the full path of the page: so no link will break if you rearrange the structure of the site without modifying the slugs of the pages. The previous examples are thus equivalent to:
 
-`[Title of the page](path/to/somepage)`  
-`[text for linking](path/to/somepage)`  
+```
+[Title of the page](path/to/somepage)  
+[text for linking](path/to/somepage)  
+```
 
 But if two or more pages have with the same slug (which in general is not advisable), you must specify the portion of the path which is sufficient to disambiguate:
 
-`[a path/to/somepage]`  
-`[a anotherpath/to/somepage]`  
+```
+[a path/to/somepage]  
+[a anotherpath/to/somepage]  
+```
 
 If the argument of the shortcut is ambiguous, the behaviour is undefined.
 
 If no page matches the argument, the shortcut creates a link equivalent to this HTML code:
 
-`<a href="slug" class="missing">slug</a>`  
+```
+<a href="slug" class="missing">slug</a>  
+```
 
 ## Installation
 
