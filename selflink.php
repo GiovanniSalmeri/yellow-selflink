@@ -14,8 +14,8 @@ class YellowSelfLink {
     public function onParseContentShortcut($page, $name, $text, $type) {
         $output = null;
         if ($name=="a" && ($type=="block" || $type=="inline")) {
-            list($slug, $atext) = explode(" ", $text, 2);
-            list($slug, $fragment) = explode("#", $slug);
+            list($slug, $atext) = $this->yellow->toolbox->getTextList($text, " ", 2);
+            list($slug, $fragment) = $this->yellow->toolbox->getTextList($slug, "#", 2);
             $slug = '/' . $slug;
             if (substru($atext, 0, 2) == "- ") $atext = trim(substru($atext, 2));
             $pages = $this->yellow->content->index(true);
