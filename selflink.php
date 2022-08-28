@@ -23,7 +23,7 @@ class YellowSelfLink {
             foreach($pages as $page) {
                 $loc = $page->getLocation(true);
                 if (substr(rtrim($loc, '/'), -strlen($slug)) == $slug) {
-                    $atext = $atext ? $atext : $page->getHtml("title");
+                    $atext = $atext ? $atext : $page->get("title");
                     $found = true;
                     break;
                 }
