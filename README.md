@@ -2,6 +2,17 @@
 
 Create internal links.
 
+## Deprecation
+
+**This extension is deprecated in favour of [Link](https://github.com/GiovanniSalmeri/yellow-link). In order to transform the Selflink shortcuts into the new Link shortcuts, do the following:**
+
+- Make a backup copy of the `/content/` folder
+- Install [Link](https://github.com/GiovanniSalmeri/yellow-link) extension
+- Download file [selflinkpatch.php](https://raw.githubusercontent.com/GiovanniSalmeri/yellow-selflink/master/selflinkpatch.php) 
+- If you do *not* want also the generic Markdwown links to be changed into Link shortcuts, delete in `selflinkpatch.php` lines 24-25
+- Copy `selflinkpatch.php` into the `/system/extensions/` folder
+- Visit the site with the browser
+
 ## How to create an internal link
 
 Create an `[a]` shortcut. 
